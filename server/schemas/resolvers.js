@@ -4,8 +4,11 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    user: async (parent, { email }) => {
-      return User.findOne({ email }).populate('savedBooks')
+    // Need to get the server linked so I can test the work I do... 
+    user: async (parent, { user }) => {
+      return User.findOne({
+        $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
+      })
     }
   },
 
