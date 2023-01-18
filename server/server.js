@@ -20,7 +20,9 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.use(routes);
+// This was the cause of the problems getting the graphql sandbox up and running
+// I believe I need to change these into react router routes on the front end... 
+// app.use(routes);
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
