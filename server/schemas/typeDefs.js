@@ -5,9 +5,9 @@ input BookInput {
   authors: [String]!
   description: String!
   title: String!
-  bookId: ID!
-  image: String!
-  link: String!
+  bookId: String!
+  image: String
+  link: String
 }
 
 type User {
@@ -20,7 +20,8 @@ type User {
 }
 
 type Book {
-  bookId: ID
+  _id: ID
+  bookId: String
   authors: [String]!
   description: String
   title: String
