@@ -2,11 +2,24 @@
   {
     "username": "Test1",
     "email": "test1@email.com",
-    "password": "password01"
-  },
-  {
-    "username": "Test2",
-    "email": "test2@email.com",
-    "password": "password02"
+    "password": "password01",
+    "savedBooks": [
+      {
+        "authors":["Malcolm X", "Alex Haley"],
+        "title": "The Autobiography of Malcolm X", 
+        "description": "The Autobiography of Malcolm X was intended to be a true autobiography, with the name of Alex Haley appearing not at all or as a ghost writer or as a mere contributor or assistant. However, with the assassination of Malcolm X having occurred in Harlem in New York City on February 21, 1965 just before this book could be published, it became necessary to reveal the important role of Alex Haley in creating this book.",
+        "bookId": "4TIXjwEACAAJ", 
+        "image": "http://books.google.com/books/content?id=4TIXjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "link": ""
+      },
+      {
+        "authors":["David Schroeder"],
+        "title": "Business in the Trenches", 
+        "description": "Business in the Trenches shows how you can exploit the lessons of the Great War to win on the business battlefield. Business in the Trenches by David Schroeder combines compelling military history with insightful business analogies. It demonstrates clearly how companies grapple with the same problems as armies at war. Business in the Trenches describes how you can leverage the experiences war to solve vexing problems and defeat the competition. Business in the Trenches takes readers through a number of fascinating stories from World War One, a time of dramatic change in warfare. It draws parallels between the problems faced by armies on the battlefield, and the problems facing businesses today. Business in the Trenches unravels the mystery of why World War One turned into the quagmire it did, and how most organizations today follow similar paths for the same reasons. Most importantly, it provides detailed and practical advice on how to deal with specific challenges and achieve breakthrough success. Schroeder demonstrates that while times may change, human nature does not. This is especially true in the high pressure worlds of business and warfare. Schroeder's common sense yet controversial theories about World War One decisions, show them to be eerily similar to those made in business today. The same forces motivate people, and they still make similar choices for similar reasons. Understanding what produces victory or disaster, and why, enables you to succeed where most fail. About the Author David Schroeder is a globally experienced business consultant, a distinguished military officer, and a critically acclaimed designer of historical military simulations. He has helped high tech companies around the world increase their productivity and profitability. He is a Colonel in the Army Reserve, and has received awards at the highest levels. He was featured along with the Army Chief of Staff in videos on improving organizational performance. Schroeder has published a number of well-received detailed studies on the Great War.",
+        "bookId": "HLewuAAACAAJ", 
+        "image": "http://books.google.com/books/content?id=HLewuAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "link": ""
+      }
+    ]
   }
 ]
