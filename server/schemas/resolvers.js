@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Book } = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -7,7 +7,9 @@ const resolvers = {
     // Need to get the server linked so I can test the work I do... 
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('savedBooks');
+        return await User.findOne({
+          $or: [{ _id: context.user._id }, { username: context.username }],
+        }).populate('savedBooks');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -36,14 +38,22 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    saveBook: async (parent, { authors, description, title, bookId, image,link }, context) => {
+    saveBook: async (parent, { book }, context) => {
       if (context.user) {
-
+        return await User.findOneAndUpdate(
+          { _id: context._id },
+          { $addToSet: { savedBooks: book } },
+          { new: true, runValidators: true }
+        );
       }
     },
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
-        
+        return await User.findOneAndUpdate(
+          { _id: user._id },
+          { $pull: { savedBooks: { bookId } } },
+          { new: true }
+        )
       }
     }
   }
