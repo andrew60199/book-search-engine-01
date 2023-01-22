@@ -5,6 +5,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     // Need to get the server linked so I can test the work I do... 
+    // Need to console.log these arguments to understand they they work
     me: async (parent, args, context) => {
       if (context.user) {
         return await User.findOne({
