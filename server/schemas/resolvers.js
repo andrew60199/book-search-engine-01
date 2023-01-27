@@ -40,6 +40,11 @@ const resolvers = {
       return { token, user };
     },
     saveBook: async (parent, { book }, context) => {
+      // We are getting the book back here
+      // console.log(book)
+      // However we are not getting the content and therefore it isn't working
+      console.log(`Context.user = ${context.user}`)
+      console.log(`Context._id = ${context._id}`)
       if (context.user) {
         return await User.findOneAndUpdate(
           { _id: context._id },
